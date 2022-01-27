@@ -1,6 +1,8 @@
 import 'package:dashboards/responsive.dart';
 import 'package:dashboards/utils/app_colors.dart';
+import 'package:dashboards/views/content_view.dart';
 import 'package:dashboards/views/custom_drawer.dart';
+import 'package:dashboards/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -66,7 +68,7 @@ class DashBoard extends StatelessWidget {
                 width: double.infinity,
                 height: double.infinity,
                 // color: Colors.blue,
-                child: CustomDrawer(),
+                child: const CustomDrawer(),
               ),
             ),
             Expanded(
@@ -74,24 +76,8 @@ class DashBoard extends StatelessWidget {
               child: Container(
                 width: double.infinity,
                 height: double.infinity,
-                child: Stack(children: [
-                  Column(
-                    children: [
-                      Expanded(
-                          flex: 3,
-                          child: Container(
-                            color: AppColors.blueColor,
-                          )),
-                      Expanded(
-                          flex: 7,
-                          child: Container(
-                            color: AppColors.redAccentColor,
-                          )),
-                    ],
-                  ),
-                ]),
+                child:  ContentView()
               ),
-
             )
           ],
         ),
